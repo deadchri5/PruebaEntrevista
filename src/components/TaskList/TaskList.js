@@ -1,6 +1,9 @@
 import { AiFillDelete, AiFillEdit, AiFillCheckCircle, AiFillCloseCircle } from 'react-icons/ai';
 import moment from 'moment';
 
+//Component
+import EmptyList from '../EmptyList/EmptyList'
+
 export default function TaskList(props) {
 
     let tasks
@@ -29,13 +32,13 @@ export default function TaskList(props) {
                                 <td className="time-ago">{moment(task.date).fromNow()}</td>
                                 { task.done === 0 ? 
                                 <td className="td-badge">
-                                    <span className="badge bg-warning">
+                                    <span className="badge bg-warning animate__animated animate__fadeInUp">
                                         undone
                                     </span>
                                 </td> 
                                     :  
                                 <td className="td-badge">
-                                    <span className="badge bg-success">
+                                    <span className="badge bg-success animate__animated animate__bounceInUp">
                                         done
                                     </span>
                                 </td> 
@@ -73,7 +76,7 @@ export default function TaskList(props) {
         )
     } else {
         return (
-            <p>No se encontraron tareas</p>
+            <EmptyList/>
         )
     }
     
