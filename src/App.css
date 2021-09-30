@@ -1,21 +1,7 @@
 body{
-  background: #8e9eab;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  position: relative;
-}
-.App{
-  position: relative;
-}
-
-footer{
-  height: 7rem;
-  color: white;
-  font-size: 1.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: #8e9eab;
+  background: -webkit-linear-gradient(to left, #eef2f3, #8e9eab);
+  background: linear-gradient(to left, #eef2f3, #8e9eab);
 }
 
 .add-task-form{
@@ -107,5 +93,60 @@ footer{
 }
 
 .card-empty-container{
-  color: #AA076B;
+  font-weight: 500;
+  margin: auto;
+  justify-content: space-around;
+}
+
+.empty-list-icon{
+  display: flex;
+  margin: auto;
+  margin-bottom: 2rem;
+  font-size: 5rem;
+}
+
+.table-container {
+  overflow-y: auto;
+  height: 23rem;
+}
+
+/*Responsive*/
+
+@media (max-width: 985px) {
+  .table{
+    font-size: 0.8rem;
+  }
+  .table-container {
+    overflow-x: auto;
+  }
+  .time-ago-container{
+    display: flex;
+    width: 6rem;
+  }
+  .description-container {
+    width: 15rem;
+  }
+}
+
+@media (max-width: 771px) {
+  .add-task-form {
+    width: 15rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 609px) {
+  .center {
+    width: 100%;
+  }
+}
+
+@media (max-width: 571px) {
+  #main-layout {
+    flex-direction: column-reverse;
+  }
+  .add-task-form {
+    width: 100%;
+    margin: 1rem 0;
+  }
 }

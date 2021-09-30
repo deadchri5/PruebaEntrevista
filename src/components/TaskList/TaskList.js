@@ -12,6 +12,7 @@ export default function TaskList(props) {
     if (tasks.length > 0) {
         return(
             <div className="card">
+                <div className="table-container">
                 <table className="table table-hover">
                     <thead className="table-heads">
                         <tr>
@@ -28,8 +29,16 @@ export default function TaskList(props) {
                             <tr key={i}>
                                 <td>{i+1}</td>
                                 <td>{task.title}</td>
-                                <td>{task.description}</td>
-                                <td className="time-ago">{moment(task.date).fromNow()}</td>
+                                <td className="task-description-td">
+                                    <div className="description-container">
+                                        {task.description}
+                                    </div>
+                                </td>
+                                <td className="time-ago">
+                                    <div className="time-ago-container">
+                                        {moment(task.date).fromNow()}
+                                    </div>
+                                </td>
                                 { task.done === 0 ? 
                                 <td className="td-badge">
                                     <span className="badge bg-warning animate__animated animate__fadeInUp">
@@ -72,6 +81,7 @@ export default function TaskList(props) {
                         ))}
                     </tbody>
                 </table>
+                </div>
             </div>
         )
     } else {

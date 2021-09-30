@@ -13,7 +13,6 @@ function App() {
         <section className="center">
           <TaskInterface/>
         </section>
-      <Footer />
     </div>
   );
 }
