@@ -1,38 +1,106 @@
-.App {
+body{
+  background: #AA076B;
+  background: -webkit-linear-gradient(to bottom, #61045F, #AA076B);
+  background: linear-gradient(to bottom, #61045F, #AA076B);
+  position: relative;
+}
+.App{
+  position: relative;
+}
+
+footer{
+  height: 7rem;
+  color: white;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-task-form{
+  width: 20rem;
+  padding: 1rem 2rem;
+  margin-right: 2rem;
+}
+
+#task-form-id{
+  font-size: 1.5rem;
+}
+
+.center {
+  margin: auto;
+  width: 90%;
+  padding: 5rem 1rem;
+}
+
+.task-button-submit{
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: inherit;
+}
+
+#main-layout{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.table-heads{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.list-button{
   display: flex;
-  flex-direction: column;
+  font-size: 1.3rem;
   align-items: center;
+}
+
+.td-badge {
+  color: #AA076B;
+}
+
+.td-badge span {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
-.App-link {
-  color: #61dafb;
+#update-task-layout{
+  position: fixed;
+  z-index: 10;
+  top: 50%;  
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.edit-task-form{
+  width: 20rem;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+.black-bg{
+  background-color: rgba(0, 0, 0, 0.377);
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.btn-close-edit{
+  width: 2rem;
+  height: 2rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  position: absolute;
+  right: 1rem;
+}
+
+.btn-container{
+  display: flex;
+}
+
+.time-ago{
+  text-transform: capitalize;
+  font-weight: 800;
+  color: #61045F;
 }
