@@ -17,7 +17,7 @@ export default function TaskInterface() {
     const [description, setDescription] = useState('')
 
     useEffect( () => {
-        axios.get('http://127.0.0.1:8000/api/getTasks')
+        axios.get('http://161.35.96.89/api/getTasks')
         .then(res => {
             const { tasks } = res.data
             setTaskArr(tasks)
@@ -31,7 +31,7 @@ export default function TaskInterface() {
     }, [])
 
     useEffect( () => {
-        axios.get('http://127.0.0.1:8000/api/getTasks')
+        axios.get('http://161.35.96.89/api/getTasks')
         .then(res => {
             const { tasks } = res.data
             setTaskArr(tasks)
@@ -55,7 +55,7 @@ export default function TaskInterface() {
             confirmButtonText: 'Yes, do it'
           }).then((result) => {
             if (result.isConfirmed) {
-                axios.delete('http://127.0.0.1:8000/api/deleteTask', {data: httpData})
+                axios.delete('http://161.35.96.89/api/deleteTask', {data: httpData})
                 .then(res => {
                     const {message} = res.data
                     updateArray()
@@ -85,7 +85,7 @@ export default function TaskInterface() {
 
     function markAsDone(id) {
         let httpParams = {'id': id}
-        axios.put('http://127.0.0.1:8000/api/updateState', httpParams)
+        axios.put('http://161.35.96.89/api/updateState', httpParams)
         .then(res => {
             const { message } = res.data
             console.log(message)
@@ -112,7 +112,7 @@ export default function TaskInterface() {
 
     function editTask(title, description) {
         let httpParams = {'id': currenID, 'title': title, 'description': description}
-        axios.put('http://127.0.0.1:8000/api/updateTask', httpParams)
+        axios.put('http://161.35.96.89/api/updateTask', httpParams)
         .then(res => {
             const {message} = res.data
             updateArray()

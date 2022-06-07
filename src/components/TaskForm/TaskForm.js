@@ -11,7 +11,7 @@ export default function TaskForm(props) {
       //proyectoDonPedos
         e.preventDefault();
         let httpData = {'title': name, 'description': description}
-        axios.post('http://127.0.0.1:8000/api/addTask', httpData)
+        axios.post('http://161.35.96.89/api/addTask', httpData)
         .then(response => {
             const { message } = response.data;
             Swal.fire({
